@@ -57,14 +57,14 @@ class UploadController extends GetxController{
                     title: const Text('Pick Photo'),
                     onTap: () {
                       imgFromGallery();
-                      Navigator.of(context).pop();
+                      Get.back();
                     }),
                 ListTile(
                   leading: const Icon(Icons.photo_camera),
                   title: const Text('Take Photo'),
                   onTap: () {
                     imgFromCamera();
-                    Navigator.of(context).pop();
+                    Get.back();
                   },
                 ),
               ],

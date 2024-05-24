@@ -16,9 +16,9 @@ class SplashController extends GetxController{
 
   callPage(BuildContext context) {
     if(AuthService.isLoggedIn()) {
-      Navigator.pushReplacementNamed(context, HomePage.id);
+      Get.offNamed(HomePage.id);
     }else{
-      Navigator.pushReplacementNamed(context, SignInPage.id);
+      Get.offNamed(SignInPage.id);
     }
   }
 

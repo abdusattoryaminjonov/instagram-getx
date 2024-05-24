@@ -6,6 +6,8 @@ import 'package:instaclon/pages/signin_page.dart';
 import 'package:instaclon/pages/signup_page.dart';
 import 'package:instaclon/pages/splash_page.dart';
 
+import 'config/root_binding.dart';
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -26,6 +28,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: SplashPage(),
+      initialBinding: RootBinding(),
       routes: {
         SplashPage.id: (context) => SplashPage(),
         HomePage.id: (context) => HomePage(),
